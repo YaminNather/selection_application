@@ -27,7 +27,7 @@ const DashboardAppBar: FC = (props) => {
               <Box display="inline-flex" alignItems="center">
                 <Typography>Jane Doe</Typography>
 
-                <KeyboardArrowDown />
+                <KeyboardArrowDown color="primary" />
               </Box>
               
               <Typography variant="subtitle1">987654321</Typography>
