@@ -9,9 +9,9 @@ interface ChartData {
 }
 
 const chartData: ChartData[] = [
-  { name: "Group A", value: 400, color: "rgb(96, 239, 255)" },
-  { name: "Group B", value: 300, color: "rgb(255, 249, 91)" },
-  { name: "Group C", value: 300, color: "rgb(255, 200, 200)" }
+  { name: "Group A", value: 400, color: "rgba(0, 255, 135, 0.66)" },
+  { name: "Group B", value: 300, color: "#FF930F" },
+  { name: "Group C", value: 300, color: "#FF5858" }
 ];
 
 const CoursesPieChart: FC = (props) => {
@@ -31,7 +31,7 @@ const CoursesPieChart: FC = (props) => {
 
   function render(): JSX.Element {
     return (
-      <Box ref={containerRef} width="100%" height="100%">
+      <Box ref={containerRef} display="flex" width="100%" height="100%" justifyContent="center" alignItems="center">
         {buildPieChart()}
       </Box>
     );
