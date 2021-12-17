@@ -21,12 +21,22 @@ const Dashboard: FC = () => {
         <Container sx={{padding: "32px"}}>
           <Typography variant="h6">Performance</Typography>
 
-          <Grid container={true} direction="row" columnSpacing={2} sx={{marginTop: "24px"}}>
+          <Grid container={true} direction="row" columnSpacing={2} sx={{marginTop: "32px"}}>
             <Grid item={true} xs={9}>
-              <Card sx={{display: "flex", height: "70px", paddingLeft: "16px", paddingRight: "16px", flexDirection: "column", justifyContent: "center"}}>
-                <Typography variant="h6">Hello Jane !</Typography>
-                
-                <Typography sx={{marginTop: "8px"}}>It's good to see you again.</Typography>
+              <Card 
+                sx={{
+                  display: "flex", height: "70px", 
+                  paddingLeft: "20px", paddingRight: "20px", paddingTop: "12px", paddingBottom: "12px", 
+                  justifyContent: "space-between"
+                }}
+              >
+                <Box display="flex" flexDirection="column" justifyContent="center">
+                  <Typography variant="h6">Hello Jane !</Typography>
+                  
+                  <Typography sx={{marginTop: "8px"}}>It's good to see you again.</Typography>
+                </Box>
+
+                <img alt="design" src="/greetings_design.png" style={{height: "100%"}} />
               </Card>
             </Grid>
             
