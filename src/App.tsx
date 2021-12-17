@@ -20,11 +20,24 @@ export const themeOptions: ThemeOptions = {
     }
   },
   components: {
+    MuiTextField: {
+      defaultProps: {
+        variant: "filled"
+      }          
+    },
     MuiButton: {
       styleOverrides: {
         root: {
           textTransform: "none",
-          boxShadow: "none"
+          boxShadow: "none",
+          fontSize: "12px"
+        }
+      }
+    },
+    MuiListItemIcon: {
+      styleOverrides: {
+        root: {
+          minWidth: "32px"
         }
       }
     },
@@ -40,6 +53,9 @@ export const themeOptions: ThemeOptions = {
 
     MuiListItemText: {
       styleOverrides: {
+        root: {
+          marginLeft: "0px"
+        },
         primary: {
           color: "#1B2559",
           fontWeight: "500"

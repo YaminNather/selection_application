@@ -45,10 +45,10 @@ const Dashboard: FC = () => {
             </Grid>
           </Grid>
 
-          <Box marginTop="28px" display="flex" justifyContent="flex-end">
+          <Box marginTop="28px" display="flex" justifyContent="flex-end" alignItems="center">
             <Typography>Show:</Typography>
 
-            <Typography>Employee</Typography>
+            <Typography color="primary">Employee</Typography>
 
             <KeyboardArrowDown />
           </Box>

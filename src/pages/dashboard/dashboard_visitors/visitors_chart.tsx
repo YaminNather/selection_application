@@ -9,12 +9,12 @@ export interface ChartData {
 
 const data: ChartData[] = [
   { name: "Monday", pv: 7500 , uv: 1000 },
-  { name: "Tuesday", pv: 7500 , uv: 1000 },
-  { name: "Wednesday", pv: 7500 , uv: 1000 },
-  { name: "Thursday", pv: 7500 , uv: 1000 },
-  { name: "Friday", pv: 7500 , uv: 1000 },
-  { name: "Saturday", pv: 7500 , uv: 1000 },
-  { name: "Sunday", pv: 7500, uv: 1100 }
+  { name: "Tuesday", pv: 7500 , uv: 2000 },
+  { name: "Wednesday", pv: 7500 , uv: 3000 },
+  { name: "Thursday", pv: 7500 , uv: 4000 },
+  { name: "Friday", pv: 7500 , uv: 5000 },
+  { name: "Saturday", pv: 7500 , uv: 6000 },
+  { name: "Sunday", pv: 7500, uv: 7000 }
 ];
 
 const getPath = (x: number, y: number, width: number, height: number) => `M${x},${y + height}
@@ -41,17 +41,17 @@ const VisitorsChart: FC = (props) => {
     return (
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={data}>          
-          <XAxis dataKey="name" />
+          <XAxis dataKey="name" axisLine={false} />
 
-          <YAxis />
+          <YAxis axisLine={false} />
           
           <Tooltip />
           
-          <Legend align="right" verticalAlign="top" />
+          <Legend margin={{bottom: 100}} align="right" verticalAlign="top" iconType="circle" />
           
-          <Bar dataKey="pv" name="New Visitors" fill="#4318FF" />
+          <Bar dataKey="pv" name="New Visitors" fill="#4318FF" radius={[25, 25, 0, 0]} barSize={16.0} />
           
-          <Bar dataKey="uv" name="Previous Visitors" fill="#6AD2FF" />
+          <Bar dataKey="uv" name="Previous Visitors" fill="#6AD2FF" radius={[25, 25, 0, 0]} barSize={16.0} />
         </BarChart>
       </ResponsiveContainer>
     );

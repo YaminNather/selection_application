@@ -46,7 +46,7 @@ const DashboardCourses: FC = (props) => {
               >
                 <Typography variant="h6" fontWeight="bold">2860</Typography>
                 
-                <Typography color="GrayText">Total</Typography>
+                <Typography variant="h6" fontWeight="600" color="GrayText">Total</Typography>
               </Box>
             </Box>
             

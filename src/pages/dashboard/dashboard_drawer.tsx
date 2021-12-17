@@ -61,6 +61,11 @@ const DashboardDrawer: FC = (props) => {
               {buildLink("Cart", <ShoppingCartOutlined />)}
               
               {buildLink("Settings", <SettingsOutlined />)}
+
+              <Box height="32px">
+              </Box>
+
+              {buildLink("<|")}
             </List>
           </Box>
         </Drawer>
@@ -68,9 +73,9 @@ const DashboardDrawer: FC = (props) => {
     );
   }
 
-  function buildLink(to: string, icon: JSX.Element): JSX.Element {
+  function buildLink(to: string, icon?: JSX.Element): JSX.Element {
     return (
-      <ListItem>
+      <ListItem disablePadding={true}>
         <ListItemButton>
           <ListItemIcon>
             {icon}

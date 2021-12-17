@@ -2,6 +2,7 @@ import { Box, IconButton, Input, Toolbar, Typography } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Button from "@mui/material/Button";
 import Avatar from "@mui/material/Avatar";
+import TextField from "@mui/material/TextField";
 import { FC } from "react";
 import { KeyboardArrowDown, NotificationsOutlined, Search } from "@mui/icons-material";
 
@@ -12,7 +13,14 @@ const DashboardAppBar: FC = (props) => {
         <Toolbar sx={{height: "80px"}}>
           <Button variant="contained">Explore <KeyboardArrowDown /></Button>
 
-          <Input startAdornment={<Search color="disabled" />} placeholder="Search Course" sx={{ marginLeft: "32px" }} />
+          <TextField 
+            variant="filled"
+            InputProps={{ 
+              startAdornment: <Search color="disabled" />, style: {backgroundColor: "#00000011"}, disableUnderline: true 
+            }} 
+            placeholder="Search Course" 
+            sx={{ marginLeft: "32px" }} 
+          />
 
           <Box sx={{flexGrow: 1}} />
 

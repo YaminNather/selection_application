@@ -29,7 +29,7 @@ export interface StatisticsItemProps {
 }
 
 const StatisticsItem: FC<StatisticsItemProps> = (props) => {
-  function render(): JSX.Element {    
+  function render(): JSX.Element {
     const primary: JSX.Element = (
       <Box display="inline-flex" alignItems="center">
         <Typography fontWeight="bold" fontSize={16}>{props.info.value}</Typography>
@@ -61,18 +61,18 @@ const StatisticsItem: FC<StatisticsItemProps> = (props) => {
     let arrow: JSX.Element;
 
     if(props.info.changePercentage > 0.0) {
-      arrow = <ArrowDropUp htmlColor="green" />;
+      arrow = <ArrowDropUp />;
       color = "green";
     }
     else {
-      arrow = <ArrowDropDown htmlColor="red" />;
+      arrow = <ArrowDropDown />;
       color = "red";
     }
     return (
       <Box display="inline-flex" alignItems="center" color={color}>
         {arrow}
 
-        <Typography>{Math.abs(props.info.changePercentage).toFixed(2)}%</Typography>
+        <Typography fontWeight="600">{Math.abs(props.info.changePercentage).toFixed(1)}%</Typography>
       </Box>
     );
   };
@@ -83,19 +83,13 @@ const StatisticsItem: FC<StatisticsItemProps> = (props) => {
 function createAvatarTheme(color: string): Theme {
   const colorObject: Colord = new Colord(color);  
 
-  const overridingThemeOptions: ThemeOptions = {            
+  const overridingThemeOptions: ThemeOptions = {
     components: {
       MuiAvatar: {
         styleOverrides: {
-          root: { backgroundColor: colorObject.alpha(0.1).toHex() }
+          root: { backgroundColor: colorObject.alpha(0.1).toHex(), color: color }
         }
-      },
-
-      MuiSvgIcon: {
-        styleOverrides: {
-          root: { color: color }
-        }
-      },
+      },  
       
       MuiListItemText: {
         styleOverrides: {

@@ -27,7 +27,7 @@ const DashboardStatistics: FC = (props) => {
           <Switch />
         </Box>
         
-        <Typography fontWeight="500" sx={{marginTop: ""}}>Overview</Typography>
+        <Typography fontWeight="600" sx={{marginTop: ""}}>Overview</Typography>
 
         <Grid container={true} rowSpacing={2} sx={{marginTop: "20px"}}>
           {statisticItemInfos.map((value, index) => {

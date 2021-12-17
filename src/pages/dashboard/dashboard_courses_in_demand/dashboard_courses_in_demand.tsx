@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import { FC } from "react";
 import Avatar from "@mui/material/Avatar";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
-import MenuBook from "@mui/icons-material/MenuBook";
+import LocalLibraryOutlined from "@mui/icons-material/LocalLibraryOutlined";
 import ListItemText from "@mui/material/ListItemText";
 import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -23,7 +23,7 @@ const DashboardCoursesInDemand: FC = (props) => {
                   <ListItemButton>
                     <ListItemAvatar>
                       <Avatar>
-                        <MenuBook color="primary" />
+                        <LocalLibraryOutlined color="primary" />
                       </Avatar>
                     </ListItemAvatar>
                     

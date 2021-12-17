@@ -43,18 +43,37 @@ const CoursesPieChart: FC = (props) => {
 
     const minSize: number = Math.min(size[0], size[1]);
     const outerRadius: number = minSize / 2;
-    const pieWidth = 40.0;
+    const pieWidth = 32.0;
 
     return (
-      <PieChart width={minSize} height={minSize}>
+      <PieChart width={minSize} height={minSize} >
+        <defs>
+          <linearGradient id="pv_gradient0">
+            <stop offset="0%" stopColor="rgba(0, 255, 135, 0.66)" />
+            
+            <stop offset="100%" stopColor="rgba(96, 239, 255, 0.3)" />
+          </linearGradient>
+          
+          <linearGradient id="pv_gradient1">
+            <stop offset="0%" stopColor="#FF930F" />
+            
+            <stop offset="100%" stopColor="rgba(255, 249, 91, 0.33)" />
+          </linearGradient>
+          
+          <linearGradient id="pv_gradient2">
+            <stop offset="0%" stopColor="#FF5858" />
+            
+            <stop offset="100%" stopColor="rgba(255, 200, 200, 0.66)" />
+          </linearGradient>
+        </defs>
+        
         <Pie
-          data={chartData}
-          fill="#8884d8"
+          data={chartData}          
           innerRadius={outerRadius - pieWidth}
-          outerRadius={outerRadius}
-          dataKey="value"        
-        >      
-          {chartData.map((entry, index) => <Cell key={`cell-${index}`} fill={entry.color} />)}
+          outerRadius={outerRadius}          
+          dataKey="value"          
+        >
+          {chartData.map((entry, index) => <Cell key={`cell-${index}`} fill={`url(#pv_gradient${index})`} />)}
         </Pie>
       </PieChart>
     );
