@@ -39,7 +39,7 @@ const DashboardDrawer: FC = (props) => {
         }
       }
     };
-    const theme: Theme = createTheme(overridingThemeOptions, themeOptions);
+    const theme: Theme = createTheme(themeOptions, overridingThemeOptions);
 
     return (
       <ThemeProvider theme={theme}>
