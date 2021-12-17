@@ -8,6 +8,7 @@ import DashboardStatistics from "./dashboard_statistics/dashboard_statistics";
 import DashboardVisitors from "./dashboard_visitors/dashboard_visitors";
 import DashboardCoursesInDemand from "./dashboard_courses_in_demand/dashboard_courses_in_demand";
 import DashboardDrawer from "./dashboard_drawer";
+import DashboardReportDownloadCard from "./dashboard_report_download_card/dashboard_report_download_card";
 
 const Dashboard: FC = () => {
   return (
@@ -30,21 +31,7 @@ const Dashboard: FC = () => {
             </Grid>
             
             <Grid item={true} xs={3}>
-              <Card sx={{display: "flex", height: "70px", padding: "16px", justifyContent: "space-between", alignItems: "center"}}>
-                <Box>
-                  <Typography fontWeight="bold">Download Report</Typography>
-                
-                  <Box display="inline-flex">
-                    <Typography sx={{marginTop: "4px"}}>Last week</Typography>
-
-                    <KeyboardArrowDown />
-                  </Box>
-                </Box>              
-                
-                <Button variant="contained" size="small" sx={{minWidth: "auto", width: "28px", height:"28px"}}>
-                  <ArrowDownwardOutlined fontSize="small" />
-                </Button>
-              </Card>
+              <DashboardReportDownloadCard />
             </Grid>
           </Grid>
 
